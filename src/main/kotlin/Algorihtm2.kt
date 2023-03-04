@@ -3,22 +3,22 @@ import java.util.*
 fun main() {
     val scanner = Scanner(System.`in`)
 
-    print("Enter the dimensions of the main memory (N): ")
+    print("Enter N: ")
     val n = scanner.nextInt()
-    print("Enter the dimensions of the main memory (M): ")
+    print("Enter M: ")
     val m = scanner.nextInt()
 
-    print("Enter the block size of the cache (power of 2 and <= N*M/4): ")
+    print("Enter cache (power of 2 and <= N*M/4): ")
     val k = scanner.nextInt()
 
     val memory = Array(n) { Array(m) { Color() } }
 
     for (j in 0 until m) {
         for (i in 0 until n) {
-            memory[i][j].c = 0
-            memory[i][j].m = 0
-            memory[i][j].y = 1
-            memory[i][j].k = 0
+            memory[j][i].c = 0
+            memory[j][i].m = 0
+            memory[j][i].y = 1
+            memory[j][i].k = 0
         }
     }
 
